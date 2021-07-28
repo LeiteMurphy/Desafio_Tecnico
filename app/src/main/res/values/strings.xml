@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Desafio_Tecnico</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="cep">CEP</string>
+    <string name="estado">Estado</string>
+    <string name="cidade">Cidade</string>
+    <string name="bairro">Bairro</string>
+    <string name="rua">Rua</string>
+    <string name="numeroResidencia">Número da Residencia</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
