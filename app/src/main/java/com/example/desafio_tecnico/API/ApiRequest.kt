@@ -1,4 +1,4 @@
-package com.example.desafio_tecnico
+package com.example.desafio_tecnico.API
 
 import com.example.desafio_tecnico.API.CEPJson
 import retrofit2.Call

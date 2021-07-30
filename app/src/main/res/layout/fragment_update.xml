@@ -8,7 +8,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutEditTextNome"
+            android:id="@+id/update_tf_Nome"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,15 +19,15 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextNome"
+                android:id="@+id/update_et_Nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:inputType="textCapWords" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputTelefone"
+            android:id="@+id/update_tf_Telefone"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,17 +36,17 @@
             android:hint="@string/telefone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutEditTextNome">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Nome">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextTelefone"
+                android:id="@+id/update_et_Telefone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputDataNascimento"
+            android:id="@+id/update_tf_DataNascimento"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,147 +54,137 @@
             android:hint="@string/data_de_nascimento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputTelefone">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Telefone">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextDataNascimento"
+                android:id="@+id/update_et_DataNascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="date"
                 android:datePickerMode="calendar"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputCep"
+            android:id="@+id/update_tf_Cep"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:autofillHints="@string/cep"
             android:hint="@string/cep"
-            android:maxLength="8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputDataNascimento"
-            app:layout_constraintEnd_toStartOf="@+id/textInputEstado">
-
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_DataNascimento"
+            app:layout_constraintEnd_toStartOf="@+id/update_tf_Estado">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextCep"
+                android:id="@+id/update_et_Cep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="8"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputEstado"
+            android:id="@+id/update_tf_Estado"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
-            android:autofillHints="@string/estado"
             android:hint="@string/estado"
-            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/textInputCep"
-            app:layout_constraintTop_toBottomOf="@id/textInputDataNascimento">
+            app:layout_constraintStart_toEndOf="@id/update_tf_Cep"
+            app:layout_constraintTop_toBottomOf="@id/update_tf_DataNascimento">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextEstado"
+                android:id="@+id/update_et_Estado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputCidade"
+            android:id="@+id/update_tf_Cidade"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:autofillHints="@string/cidade"
             android:hint="@string/cidade"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEstado">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Estado">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextCidade"
+                android:id="@+id/update_et_Cidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputBairro"
+            android:id="@+id/update_tf_Bairro"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:autofillHints="@string/bairro"
             android:hint="@string/bairro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputCidade">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Cidade">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextBairro"
+                android:id="@+id/update_et_Bairro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
-            />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLogradouro"
+            android:id="@+id/update_tf_Logradouro"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:autofillHints="@string/logradouro"
             android:hint="@string/logradouro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputBairro">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Bairro">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextLogradouro"
+                android:id="@+id/update_et_Logradouro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
-            />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputNumeroResidencia"
+            android:id="@+id/update_tf_NumeroResidencia"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:autofillHints="@string/numeroResidencia"
             android:hint="@string/numeroResidencia"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLogradouro">
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_Logradouro">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextNumeroResidencia"
+                android:id="@+id/update_et_NumeroResidencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
-            />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnCadastrar"
+            android:id="@+id/btnAtualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/cadastrar"
+            android:text="@string/atualizar"
+            android:backgroundTint="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputNumeroResidencia" />
+            app:layout_constraintTop_toBottomOf="@+id/update_tf_NumeroResidencia" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

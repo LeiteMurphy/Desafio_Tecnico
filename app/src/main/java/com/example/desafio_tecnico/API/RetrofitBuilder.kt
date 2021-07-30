@@ -1,4 +1,4 @@
-package com.example.desafio_tecnico
+package com.example.desafio_tecnico.API
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

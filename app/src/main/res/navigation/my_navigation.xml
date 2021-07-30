@@ -8,19 +8,36 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.desafio_tecnico.fragments.list.ListFragment"
-        android:label="fragment_list"
+        android:label="Contatos"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addContactFragment"
             app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <argument
+            android:name="currentContact"
+            app:argType="com.example.desafio_tecnico.model.Contato" />
     </fragment>
     <fragment
         android:id="@+id/addContactFragment"
         android:name="com.example.desafio_tecnico.fragments.add.AddContactFragment"
-        android:label="fragment_add_contact"
+        android:label="Novo contato"
         tools:layout="@layout/fragment_add_contact" >
         <action
             android:id="@+id/action_addContactFragment_to_listFragment"
             app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.desafio_tecnico.fragments.update.UpdateFragment"
+        android:label="Atualizar Contato">
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentContact"
+            app:argType="com.example.desafio_tecnico.model.Contato" />
     </fragment>
 </navigation>

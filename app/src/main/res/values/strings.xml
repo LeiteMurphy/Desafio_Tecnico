@@ -7,11 +7,12 @@
     <string name="estado">Estado</string>
     <string name="cidade">Cidade</string>
     <string name="bairro">Bairro</string>
-    <string name="logradouro">Logradouro</string>
+    <string name="logradouro">Rua/Endereço</string>
     <string name="numeroResidencia">Número da Residencia</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="lista_de_contatos">Lista de Contatos</string>
     <string name="criar_contato">Criar contato</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="atualizar">Atualizar</string>
 </resources>

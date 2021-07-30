@@ -1,15 +1,18 @@
-package com.example.desafio_tecnico.database
+package com.example.desafio_tecnico.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.desafio_tecnico.database.ContatoDatabase
+import com.example.desafio_tecnico.repository.ContatoRepository
+import com.example.desafio_tecnico.model.Contato
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ContatoViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Contato>>
+    val readAllData: LiveData<List<Contato>>
     private val repository: ContatoRepository
 
     init {
@@ -24,4 +27,15 @@ class ContatoViewModel(application: Application): AndroidViewModel(application) 
         }
     }
 
+    fun updateContact(contato: Contato){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateContact(contato)
+        }
+    }
+
+    fun deleteContact(contato: Contato){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteContact(contato)
+        }
+    }
 }
